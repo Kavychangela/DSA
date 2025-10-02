@@ -29,6 +29,7 @@ class Solution {
         System.out.println("All combinations of balanced parentheses for n = " + n + " are:");
         for (String combination : result) {
             System.out.println(combination);
+            System.out.println(combination);
         }
     }
 }
