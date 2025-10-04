@@ -38,7 +38,6 @@ class Solution {
         List<List<String>> result = solution.partition(s);
         for (List<String> partition : result) {
             System.out.println(partition);
-            System.out.println(partition);
         }
     }
 }
