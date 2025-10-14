@@ -19,5 +19,6 @@ public class LinkedList{
         int []arr={2,5,6,8};
         Node y=new Node(arr[3]);
         System.out.println(y.data);
+        System.out.println(y.data);
     }
 }
