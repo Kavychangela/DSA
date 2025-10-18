@@ -32,6 +32,29 @@ public class ArrtoLL{
         System.out.println("null");
     }
 
+    public static int lengthOfLinkedList(Node head){
+        int length=0;
+        Node current=head;
+
+        while(current!=null){
+            length++;
+            current=current.next;
+        }
+        return length;
+    }
+
+    public static boolean searchElement(Node head, int target){
+        Node current=head;
+        while(current!=null){
+            if(current.data==target){
+                System.out.println("Present");
+                return true;
+            }
+            current=current.next;
+        }
+        System.out.println("Not Present");
+        return false;
+    }
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
 
@@ -40,5 +63,8 @@ public class ArrtoLL{
 
         // Print the linked list
         printLinkedList(head);
+        int length=lengthOfLinkedList(head);
+        System.out.println("Length of the linked list:" + length);
+        searchElement(head, 5);
     }
 }
