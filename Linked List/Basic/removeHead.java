@@ -78,6 +78,20 @@ public class removeHead{
             head=head.next;
             return head;
         }
+        int cnt=0;
+        Node temp=head;
+        Node prev=null;
+        
+        while(temp!=null){
+            cnt++;
+            if(cnt==k){
+                prev.next=prev.next.next;
+                break;
+            }
+            prev=temp;
+            temp=temp.next;
+        }
+        return head;
     }
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
@@ -99,6 +113,10 @@ public class removeHead{
         //remove tails
         head=removesTail(head);
         System.out.println(head+"LL after deleting Tail");
+        printLinkedList(head);
+        // remove kth element
+        head=removekthNode(head, 3);
+        System.out.println(head+"LL after deleting kth element");
         printLinkedList(head);
     }
 }
