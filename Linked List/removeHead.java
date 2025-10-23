@@ -93,6 +93,26 @@ public class removeHead{
         }
         return head;
     }
+
+    private static Node removeNodek(Node head, int k){
+        if(head==null)return head;
+        if(head.data==k){
+            head=head.next;
+            return head;
+        }
+        Node temp=head;
+        Node prev=null;
+        
+        while(temp!=null){
+            if(temp.data==k){
+                prev.next=temp.next;
+                break;
+            }
+            prev=temp;
+            temp=temp.next;
+        }
+        return head;
+    }
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
 
@@ -117,6 +137,10 @@ public class removeHead{
         // remove kth element
         head=removekthNode(head, 3);
         System.out.println(head+"LL after deleting kth element");
+        printLinkedList(head);
+
+        head=removeNodek(head, 2);
+        System.out.println(head+"LL adter deleting k");
         printLinkedList(head);
     }
 }
